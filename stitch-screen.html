@@ -1,0 +1,389 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Children of Life</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#666000",
+                        "inverse-surface": "#313030",
+                        "secondary-fixed-dim": "#64d8d3",
+                        "tertiary-fixed-dim": "#d6ca00",
+                        "tertiary-container": "#ada400",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#2bb673",
+                        "tertiary-fixed": "#f3e72b",
+                        "outline-variant": "#bccabd",
+                        "surface": "#fcf9f8",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#fcf9f8",
+                        "surface-variant": "#e5e2e1",
+                        "on-tertiary-container": "#3c3900",
+                        "surface-tint": "#006d40",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#1e1c00",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#5cde97",
+                        "primary-fixed-dim": "#5cde97",
+                        "background": "#fcf9f8",
+                        "surface-container-high": "#eae7e7",
+                        "primary": "#006d40",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-surface": "#1c1b1b",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#7afbb1",
+                        "surface-container-low": "#f6f3f2",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#002110",
+                        "on-tertiary-fixed-variant": "#4d4800",
+                        "on-surface-variant": "#3d4a40",
+                        "on-secondary-fixed": "#00201f",
+                        "secondary": "#006a67",
+                        "surface-dim": "#dcd9d9",
+                        "on-primary-container": "#ffffff",
+                        "outline": "#6d7a6f",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#00522f",
+                        "secondary-fixed": "#82f5ef",
+                        "on-secondary-fixed-variant": "#00504d",
+                        "secondary-container": "#82f5ef",
+                        "on-background": "#1c1b1b",
+                        "on-secondary-container": "#00706d",
+                        "surface-container": "#f0eded",
+                        "pillar-blue": "#0088CE",
+                        "pillar-yellow": "#F7B500",
+                        "pillar-green": "#2bb673",
+                        "pillar-pink": "#E34A7B",
+                        "pillar-darkblue": "#20466A",
+                        "pillar-lightblue": "#009BDE"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px",
+                        "card": "1.5rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "stack-lg": "64px",
+                        "stack-md": "24px",
+                        "stack-sm": "8px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "section-padding": "100px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "label-lg": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-lg": ["14px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-xl": ["56px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .bg-gradient-yellow-green {
+            background: linear-gradient(180deg, #FDFDF6 0%, #E8F5E9 100%);
+        }
+        .doodle-accent {
+            position: absolute;
+            z-index: 0;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased overflow-x-hidden">
+<!-- Top Navigation -->
+<nav class="fixed z-50 bg-surface/95 dark:bg-surface-container-high/95 backdrop-blur-md shadow-sm border-b border-outline-variant/30 flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto left-0 right-0 rounded-full mx-gutter top-4">
+<div class="flex items-center gap-2"><img alt="Vision For Youth Foundation" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIs_cQdStdA2rKLVEP3uOYC_YCIth27EUrU9T-H50cl93ZepHSxYqgX4MGYQWsFve1zmpXcjJFWFz7038JPWSf8AKY6NGXFQYdzRaXolZcUHkhb_SkoHtLyZsdOBF0GNnY4ing8OI_8ydH_Uvissif4ZMo50u4lhmWh_RzE70uK89JNqdNbeFv6h-ZLV_8MTP0EG1W-4GuTlHvMt6LUbLt-hdoqH-_DG2XIGe7lBDYpGKf7U9iX2s9lqQNPNE5_wrraA"></div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary font-label-lg text-label-lg" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg" href="#">About US</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Programs</a><a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Gallery</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Contact Us</a>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-lg text-label-lg px-6 py-3 rounded-full hover:bg-primary/90 hover:text-on-primary transition-all scale-95 active:scale-90 duration-200">
+            Donate Now
+        </button>
+</nav>
+<!-- Main Content -->
+<main class="pt-[80px]">
+<!-- Hero Section -->
+<section class="relative max-w-container-max mx-auto px-margin-mobile md:px-gutter mt-stack-md rounded-card overflow-hidden h-[600px]">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A group photograph of diverse young people and children standing together outdoors against a lush green hedge, smiling and looking at the camera, representing the community and the foundation's impact." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBY757j-OcQTF_2wBwo5yZhZZ6LyIGOw40ryI0KM4A4qHBdiHt0pF42oqcmQLl04rVm7ILAXHGdZETQ6As1Kez2TqMIYJc8sGXz0snVKumnwQwAo0lvWkkI2Hd1HdmfUbcoPOBw60_ICH09J4kRWuRIUIo5TLImWEjUE_HE9eZqMvHWkRI5REcP9cx37KJ35G2dhqjPtHKLmVTHkazAMzrjdRwIQMyxzzCTX0yE2m3SGqZImi9NOU7LAp6G3Ph4jqiX3w&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent md:bg-gradient-to-r md:from-black/70 md:to-transparent"></div>
+<div class="relative h-full flex flex-col justify-center px-8 md:px-16 md:w-2/3">
+<h1 class="font-headline-xl text-headline-xl text-white mb-6"><div class="flex flex-col gap-2">
+<span class="font-black text-headline-xl">Vision4Youth</span>
+<span class="font-body-lg italic opacity-90">Filament of hope</span>
+<span class="font-bold uppercase tracking-widest text-primary-container">EDUCATION for all</span>
+</div></h1>
+<!-- Simple pagination dots -->
+<div class="absolute bottom-8 left-8 md:left-16 flex gap-2">
+<div class="w-2 h-2 rounded-full bg-white"></div>
+<div class="w-2 h-2 rounded-full bg-white/50"></div>
+<div class="w-2 h-2 rounded-full bg-white/50"></div>
+</div>
+</div>
+</section>
+<!-- Mission Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-padding relative">
+<!-- Abstract doodle placeholder -->
+<div class="absolute top-10 right-1/2 translate-x-32 text-tertiary-fixed z-0 opacity-50">
+<span class="material-symbols-outlined text-[100px]">stars</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center relative z-10">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">About Vision Foundation</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Vision Foundation is a secular, not-for-profit organization in India, registered under the Societies Registration Act of 1860. Set up in 2014, we are dedicated to the upliftment of society through social and educational institutions.</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Our mission is to prepare students for higher knowledge through career counseling and professional guidance. We focus on developing moral and ethical values, inculcating self-discipline, and fostering an ideal national character for the next generation.</p>
+<button class="bg-primary-container text-on-primary-container font-label-lg text-label-lg px-8 py-3 rounded-full hover:bg-primary/90 hover:text-on-primary transition-all">
+                        About Us
+                    </button>
+</div>
+<div class="relative">
+<img alt="Vision4Youth Foundation Logo" class="w-full h-full rounded-card object-contain bg-surface-container-low p-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIK5bbmLK9OjyturCehHc2nCZByUL6DhJ70KtK5OsoGqI35ePFyKEntXgJHHMzwMlImtv9rS7hdV0SlMJNTwgmeBkT8VjPJuQTimIk0YOIAhMrUGccUDFWXIfiK-jgIlEiKbd_SLy9z0S1depQyh7NfF5Qdy9WbrUtiRJxOv3s07HaxKx0SmljwR9m84D7_17xUkxkouHe9028qvqfubZYUh5EEGbxP8IR1m2X_4ED-ogFsjW4oljKYKg7v7YOJdzWnw">
+</div>
+</div>
+</section>
+<!-- Pillars Section with gradient background -->
+<section class="bg-gradient-yellow-green py-section-padding px-margin-mobile md:px-gutter relative">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col items-center justify-center mb-stack-lg gap-6">
+<div class="w-full text-center">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Our Programs</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Every child's need is unique but every act of care matters. Select one of the six essentials below and make it stronger today.</p>
+</div>
+</div>
+<!-- Bento Grid for Pillars -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Campus 2 Corporate -->
+<div class="bg-white rounded-card overflow-hidden flex flex-col border border-outline-variant/20 hover:shadow-lg transition-shadow">
+<div class="bg-[#0088CE] p-6 text-white flex-grow"><div class="flex justify-between items-center mb-4"><h3 class="font-headline-sm text-headline-sm">Campus 2 Corporate</h3><div class="w-8 h-8 rounded-full border border-white/50 flex items-center justify-center font-label-sm text-label-sm">01</div></div></div>
+<img alt="Campus 2 Corporate training session" class="w-full h-48 object-cover p-2 rounded-card" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASuqs6n4tIhOUzKBHA4Whu6DuXKQ5Ie1ZAwbW6_UF0l4Jvsw_6kbE2SF9d45DiQx68I2pYT9ygYwWsirNzav_QLh_-Xfz6AZ16c-PAsUMLnEqbKR4ONYx4k7ZQpYmN7OxdzB_COQehBVzCyNpFr20lzbYehg7K7sPcpW_5sAyTszwM6M7bxeJmBlItnDxhgkxtlF7jzKKgHfD4UwJVV35-RnXZ9UYZNLmIuoQxCOV-dm6YfvRi8qNF">
+</div>
+<!-- Interview Preparation -->
+<div class="bg-white rounded-card overflow-hidden flex flex-col border border-outline-variant/20 hover:shadow-lg transition-shadow">
+<div class="bg-[#F7B500] p-6 text-on-tertiary-fixed flex-grow"><div class="flex justify-between items-center mb-4"><h3 class="font-headline-sm text-headline-sm">Interview Preparation</h3><div class="w-8 h-8 rounded-full border border-on-tertiary-fixed/50 flex items-center justify-center font-label-sm text-label-sm">02</div></div></div>
+<img alt="Interview Preparation session" class="w-full h-48 object-cover p-2 rounded-card" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUuYX4U9s_fm5vXOmiEELveez5vRLZuUSu-pNZxBNj4lzorkwKhV7wa3519v9Ue9AzUF7M-8d8Fb2M8RSX7udewwTeU9m7Ceig1l3xjd01FJJMZXTKbX_PGWgKtGVysDhIa_eNrAQ35c2aG2iHua5Eyhf3_oDpAGweFcvNeCuCieLt5U1yxE8rMilOz0jZwNj7w_G9Mz18fhNa5uGaAOK05Br5Xr40sLCLVsatyqYX1oNhHSI8AkbG">
+</div>
+<!-- Career Guidance -->
+<div class="bg-white rounded-card overflow-hidden flex flex-col border border-outline-variant/20 hover:shadow-lg transition-shadow">
+<div class="bg-primary-container p-6 text-white flex-grow"><div class="flex justify-between items-center mb-4"><h3 class="font-headline-sm text-headline-sm">Career Guidance</h3><div class="w-8 h-8 rounded-full border border-white/50 flex items-center justify-center font-label-sm text-label-sm">03</div></div></div>
+<img alt="Career Guidance session" class="w-full h-48 object-cover p-2 rounded-card" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYcsoNxzRBwrtxr4IwZAdGI583nY0ZYH0C4El2njvo26xVTchDuhtJ6_GNqF1dutNEQuK6ViPBKgaO-1rJgaU8FOjuSvD_59rn5gTYFKThbms-5doDzPk9_fOo5SJK6EacOoEiMoPQ_K14mXqZNEPtRxdthjif_CyVFBnZOGKQ7ixrWHOAt3Q_ndfECBvONI8Ux2enVvzymU1CNwUJOCHYOkvGCD0bAgYdxexapIZL2TJHRoIf14EO">
+</div>
+<!-- Personality Development -->
+<div class="bg-white rounded-card overflow-hidden flex flex-col border border-outline-variant/20 hover:shadow-lg transition-shadow">
+<div class="bg-[#E34A7B] p-6 text-white flex-grow"><div class="flex justify-between items-center mb-4"><h3 class="font-headline-sm text-headline-sm">Personality Development</h3><div class="w-8 h-8 rounded-full border border-white/50 flex items-center justify-center font-label-sm text-label-sm">04</div></div></div>
+<img alt="Personality Development workshop" class="w-full h-48 object-cover p-2 rounded-card" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbusWKMH96cITS8YtKN3Cbd8r03gFdyJcpmKD2vyu5jdz4L5kurOpmauYcommJ6IPRN7oZwm7Ij5fHJC137mS_HaVFpnLvu5p3lVHKnOgl1BkcmbTeJE312poHFGVHgZQ_zbFgBXr4RjsCTJjiwuo_xoqwVlcucQQjjKLJMcIsdU_wulbMVdQVT1PJT2Hk6zswP_y7wbKl-MIZ6worIPFE4RLZfauPhxn0Z_NwY8pjlJG-WWSuudpu">
+</div>
+<!-- Soft Skills -->
+<div class="bg-white rounded-card overflow-hidden flex flex-col border border-outline-variant/20 hover:shadow-lg transition-shadow">
+<div class="bg-[#20466A] p-6 text-white flex-grow"><div class="flex justify-between items-center mb-4"><h3 class="font-headline-sm text-headline-sm">Soft Skills</h3><div class="w-8 h-8 rounded-full border border-white/50 flex items-center justify-center font-label-sm text-label-sm">05</div></div></div>
+<img alt="Soft Skills training session" class="w-full h-48 object-cover p-2 rounded-card" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0M0HuHDp2tPjL-QD0jN5yF2sAB3UZRqDH1fxbZ607TKpjY6vOMByXuxgE7BVf8Xk8tEpyrx6bojsjrLZsxXzeLdgmLbh5LewhRztW4743qzogc6w3Vd8VYJyDiNSPvLIo6jMO-2fG3wG2nWorNAhZalGU5y7JY12G1gdNMPxdL_-hxM-4xUaaO5FeSpzgJ_c8p57WkBCx5esfQLPst2zmH5RZpTs5KULKjszx3ONerbqG1zJxS078">
+</div>
+<!-- Boot Camp -->
+<div class="bg-white rounded-card overflow-hidden flex flex-col border border-outline-variant/20 hover:shadow-lg transition-shadow">
+<div class="bg-[#009BDE] p-6 text-white flex-grow"><div class="flex justify-between items-center mb-4"><h3 class="font-headline-sm text-headline-sm">Boot Camp</h3><div class="w-8 h-8 rounded-full border border-white/50 flex items-center justify-center font-label-sm text-label-sm">06</div></div></div>
+<img alt="Code Innovators Boot Camp" class="w-full h-48 object-cover p-2 rounded-card" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMr6aqHogPv3Qe-spQXRNV1Z28scgctyAr0z8r823BkZR6z9J6EtELZYPca7UvKO2nIiGiKLluSyGoOUcm8ehoRaXLGLeLvSAMrn3cAUN2o5BgVspziZSdHiFvLZcG4-dqsB_KEj7EMV8gzelkMXobRroXnnx-XBE-XpoEieOSHWttYqCguDp1FfzAfrw7-CvzaP0OmexiLKQi2-leyAV9sOI4dmQ-ip-ZfmmbPjG9OyM5WSRZE-H6">
+</div>
+</div>
+</div>
+</section>
+<!-- Impact Section -->
+<section class="py-section-padding px-margin-mobile md:px-gutter bg-surface">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Our Impact &amp; Reach</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Vision Foundation has been very active in the past and during the pandemic COVID-19, helping families and training students across the region.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Families Helped -->
+<div class="bg-surface-container-low p-8 rounded-card border border-outline-variant/30 flex flex-col items-center text-center hover:shadow-lg transition-shadow">
+<div class="w-16 h-16 rounded-full bg-primary-container/10 flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-headline-md">groups</span>
+</div>
+<div class="font-headline-md text-headline-md text-primary mb-2">1,648</div>
+<div class="font-label-lg text-label-lg text-on-surface-variant">Families Helped</div>
+</div>
+<!-- Students Trained -->
+<div class="bg-surface-container-low p-8 rounded-card border border-outline-variant/30 flex flex-col items-center text-center hover:shadow-lg transition-shadow">
+<div class="w-16 h-16 rounded-full bg-primary-container/10 flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-headline-md">school</span>
+</div>
+<div class="font-headline-md text-headline-md text-primary mb-2">1,100</div>
+<div class="font-label-lg text-label-lg text-on-surface-variant">Students Trained</div>
+</div>
+<!-- Soft Skills -->
+<div class="bg-surface-container-low p-8 rounded-card border border-outline-variant/30 flex flex-col items-center text-center hover:shadow-lg transition-shadow">
+<div class="w-16 h-16 rounded-full bg-primary-container/10 flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-headline-md">forum</span>
+</div>
+<div class="font-headline-md text-headline-md text-primary mb-2">900</div>
+<div class="font-label-lg text-label-lg text-on-surface-variant">Soft Skills Sessions</div>
+</div>
+<!-- Donated -->
+<div class="bg-surface-container-low p-8 rounded-card border border-outline-variant/30 flex flex-col items-center text-center hover:shadow-lg transition-shadow">
+<div class="w-16 h-16 rounded-full bg-primary-container/10 flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-headline-md">payments</span>
+</div>
+<div class="font-headline-md text-headline-md text-primary mb-2">200,000</div>
+<div class="font-label-lg text-label-lg text-on-surface-variant">Donated</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-padding" id="contact-us">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+<!-- Contact Form -->
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Get in Touch</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Have questions about our mission or want to get involved? We'd love to hear from you.</p>
+<form class="space-y-4">
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface mb-2">Full Name</label>
+<input class="w-full p-4 rounded-lg border border-outline-variant bg-surface focus:border-primary outline-none transition-colors" placeholder="Your Name" type="text">
+</div>
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface mb-2">Email Address</label>
+<input class="w-full p-4 rounded-lg border border-outline-variant bg-surface focus:border-primary outline-none transition-colors" placeholder="email@example.com" type="email">
+</div>
+<div>
+</div>
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface mb-2">Message</label>
+<textarea class="w-full p-4 rounded-lg border border-outline-variant bg-surface focus:border-primary outline-none transition-colors" placeholder="How can we help?" rows="4"></textarea>
+</div>
+<button class="bg-primary text-on-primary font-label-lg text-label-lg px-8 py-4 rounded-full hover:bg-primary/90 transition-all active:scale-95" type="submit">
+          Submit Message
+        </button>
+</form>
+</div>
+<!-- Contact Info -->
+<div class="flex flex-col justify-center">
+<div class="bg-surface-container-low p-8 rounded-card border border-outline-variant/30">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-6">Contact Information</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Office Address</p>
+<p class="font-body-md text-body-md text-on-surface-variant">4th Floor Swadesh Heights , SN-11/2A, Kondhwa KD, Opposite Agra Hotel, Kausar Baugh, Kondhwa Pune - 411048</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">mail</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Email Us</p>
+<p class="font-body-md text-body-md text-on-surface-variant">info@visionforyouth.in</p><div class="">visionforyouth.in@gmail.com</div><p class=""></p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">call</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Call Us</p>
+<p class="font-body-md text-body-md text-on-surface-variant">+91&nbsp; 9975994213</p><div class="">+91 9552590139</div><p class=""></p>
+</div>
+</div>
+</div>
+<div class="mt-12">
+<p class="font-label-lg text-label-lg text-on-surface mb-4">Follow Our Journey</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">play_arrow</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-stack-lg relative overflow-hidden bg-surface-container-low dark:bg-surface-dim border-t border-outline-variant mt-24">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter max-w-container-max mx-auto relative z-10">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-4"><img alt="Vision For Youth Foundation" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8GsVf4mRXZ6u2zstWyO7NnSarCIv-oHpil21fCn2DOXH_HU7zRX2xxB_9mxtwcN16Vj47kxUaZaApdu1pec7ed-xX-h4RuRXfUZHjHHFyB-v47kTVS0xYptpJhkCbQKwSx4xwknoUdvCfzzMWqFhBg3T3cU4Lg1UO7UgfJ4PgIWhRxwiDfEGX1ud8KsOs0yyTUhCyvd_YcC_AanjUukbEfVsn0vLF2U1SRC6fBsDtxUZFi2V_v9cPD8XSZqIortfmHA"></div>
+<div class="flex gap-4 mt-6">
+<a class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant hover:bg-primary-container hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">play_arrow</span>
+</a>
+</div>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-lg text-label-lg font-bold mb-4 text-on-surface">Quick Links</h4>
+<ul class="space-y-2">
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary opacity-80 hover:opacity-100 transition-opacity" href="#">How it works</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary opacity-80 hover:opacity-100 transition-opacity" href="#">Get Involved</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary opacity-80 hover:opacity-100 transition-opacity" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-lg text-label-lg font-bold mb-4 text-on-surface">Resources</h4>
+<ul class="space-y-2">
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary opacity-80 hover:opacity-100 transition-opacity" href="#">FAQs</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary opacity-80 hover:opacity-100 transition-opacity" href="#">Press &amp; Media</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary opacity-80 hover:opacity-100 transition-opacity" href="#">Reports &amp; Audits</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-lg text-label-lg font-bold mb-4 text-on-surface">Contact Us</h4>
+<p class="font-body-md text-body-md text-on-surface font-semibold mb-2">Vision For Youth</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-1">4th Floor Swadesh Heights , SN-11/2A, Kondhwa KD, Opposite Agra Hotel, Kausar Baugh, Kondhwa Pune - 411048</p><div><br></div><p class=""></p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-1">visionforyouth.in@gmail.com</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">+91 9975994213</p>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-12 pt-6 border-t border-outline-variant/50 flex flex-col md:flex-row justify-between items-center z-10 relative">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 Youth For Vision. All Rights Reserved.</p>
+</div>
+<!-- Abstract decorative doodle -->
+<div class="absolute bottom-0 right-0 opacity-20 pointer-events-none translate-x-1/4 translate-y-1/4 text-primary">
+<span class="material-symbols-outlined" style="font-size: 300px;">group</span>
+</div>
+</footer>
+</main>
+
+
+</body></html>
